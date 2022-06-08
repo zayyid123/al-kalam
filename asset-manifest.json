@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/al-kalam/static/css/main.4aec6d5b.css",
+    "main.js": "/al-kalam/static/js/main.6b120747.js",
+    "index.html": "/al-kalam/index.html",
+    "static/media/home.svg": "/al-kalam/static/media/home.a7ab660b70d6e563c85a1840ee658e1e.svg",
+    "static/media/person.svg": "/al-kalam/static/media/person.b7f58fb9d76b963d9c446ca221f1632f.svg",
+    "static/media/bookmark.svg": "/al-kalam/static/media/bookmark.846277d85555c39d581808a2404d87c1.svg",
+    "main.4aec6d5b.css.map": "/al-kalam/static/css/main.4aec6d5b.css.map",
+    "main.6b120747.js.map": "/al-kalam/static/js/main.6b120747.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aec6d5b.css",
+    "static/js/main.6b120747.js"
+  ]
+}
