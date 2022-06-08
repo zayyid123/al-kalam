@@ -4,17 +4,17 @@ import Profile from "../pages/profil";
 
 const list = [
     {
-        path: "/",
+        path: "/al-kalam",
         name: "HOME",
         component: Home,
     },
     {
-        path: "/bookmark",
+        path: "/al-kalam/bookmark",
         name: "BOOKMARK",
         component: Bookmark,
     },
     {
-        path: "/profile",
+        path: "/al-kalam/profile",
         name: "PROFILE",
         component: Profile,
     },

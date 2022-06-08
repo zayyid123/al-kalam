@@ -11,17 +11,17 @@ import bookmark from '../assets/icons/bookmark.svg'
 const data = [
     {
         name: 'Profile',
-        link: '/profile',
+        link: '/al-kalam/profile',
         icon: profile
     },
     {
         name: 'Home',
-        link: '/',
+        link: '/al-kalam',
         icon: home
     },
     {
         name: 'Bookmark',
-        link: '/bookmark',
+        link: '/al-kalam/bookmark',
         icon: bookmark
     },
 ]

@@ -44,7 +44,7 @@ const NavbarMobile = ({ page }) => {
                 <div>
                     {
                         page !== 'Al-Kalam' ?
-                            <Link to={'/'}>
+                            <Link to={'/al-kalam'}>
                                 <img className='w-[20px] h-[20px] ' src={darkMode === 'dark' ? backIconHijau : backIconPutih} alt='back icon' />
                             </Link>
                             :
