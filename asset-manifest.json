@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/al-kalam/static/css/main.27104bde.css",
-    "main.js": "/al-kalam/static/js/main.dc3c8e49.js",
+    "main.css": "/al-kalam/static/css/main.458765fc.css",
+    "main.js": "/al-kalam/static/js/main.4de3f494.js",
     "static/media/light-mode.png": "/al-kalam/static/media/light-mode.8b49bce8c757f3b43b89.png",
     "static/media/night-mode.png": "/al-kalam/static/media/night-mode.7f5984cf938931c17454.png",
-    "static/media/back-icon.svg": "/al-kalam/static/media/back-icon.8a29abe50fb84b9bd9beddfff9c38147.svg",
+    "static/media/back-icon_hijau.svg": "/al-kalam/static/media/back-icon_hijau.8a29abe50fb84b9bd9beddfff9c38147.svg",
+    "static/media/back-icon_putih.svg": "/al-kalam/static/media/back-icon_putih.1e3aa02b22942985430eecb97fefa6ac.svg",
     "index.html": "/al-kalam/index.html",
     "static/media/home.svg": "/al-kalam/static/media/home.a7ab660b70d6e563c85a1840ee658e1e.svg",
     "static/media/person.svg": "/al-kalam/static/media/person.b7f58fb9d76b963d9c446ca221f1632f.svg",
     "static/media/bookmark.svg": "/al-kalam/static/media/bookmark.846277d85555c39d581808a2404d87c1.svg",
-    "main.27104bde.css.map": "/al-kalam/static/css/main.27104bde.css.map",
-    "main.dc3c8e49.js.map": "/al-kalam/static/js/main.dc3c8e49.js.map"
+    "main.458765fc.css.map": "/al-kalam/static/css/main.458765fc.css.map",
+    "main.4de3f494.js.map": "/al-kalam/static/js/main.4de3f494.js.map"
   },
   "entrypoints": [
-    "static/css/main.27104bde.css",
-    "static/js/main.dc3c8e49.js"
+    "static/css/main.458765fc.css",
+    "static/js/main.4de3f494.js"
   ]
 }
