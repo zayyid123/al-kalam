@@ -44,24 +44,7 @@ const ToolBarMobile = () => {
                         border-white 
                         group-hover:border-[#a2ebfc]
                         dark:group-hover:border-[#211E2D] 
-                        group-hover:before:content-[""] 
-                        group-hover:before:absolute
-                        group-hover:before:top-[60%]
-                        group-hover:before:left-[-16px]
-                        group-hover:before:rounded-tr-[20px]
-                        group-hover:before:shadow-[0_-5px_0_0_#a2ebfc]
-                        dark:group-hover:before:shadow-[0_-5px_0_0_#211E2D]
-                        group-hover:before:w-[21px] 
-                        group-hover:before:h-[24px]
-                        group-hover:after:content-[""] 
-                        group-hover:after:absolute
-                        group-hover:after:top-[60%]
-                        group-hover:after:right-[-16px]
-                        group-hover:after:rounded-tl-[20px]
-                        group-hover:after:shadow-[0_-5px_0_0_#a2ebfc]
-                        dark:group-hover:after:shadow-[0_-5px_0_0_#211E2D]
-                        group-hover:after:w-[21px] 
-                        group-hover:after:h-[24px]'>
+                        '>
                                         <img className='w-[25px] h-[25px]' src={res.icon} alt={res.name} />
                                     </div>
                                     <p className='absolute bottom-[5px] ease-in-out duration-100 opacity-0 group-hover:opacity-100'>{res.name}</p>
