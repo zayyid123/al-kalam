@@ -1,7 +1,11 @@
 {
   "files": {
-    "main.css": "/al-kalam/static/css/main.c235e852.css",
-    "main.js": "/al-kalam/static/js/main.44de357c.js",
+    "main.css": "/al-kalam/static/css/main.318ad54c.css",
+    "main.js": "/al-kalam/static/js/main.9361ac4b.js",
+    "static/media/last-read.png": "/al-kalam/static/media/last-read.914164c2c5c8f2acc94c.png",
+    "static/media/quran.png": "/al-kalam/static/media/quran.fba64e3e70a581bb9cf1.png",
+    "static/media/quran2.png": "/al-kalam/static/media/quran2.b01f94a27500405a473a.png",
+    "static/media/quran3.png": "/al-kalam/static/media/quran3.8952210b1a6bfa3d6add.png",
     "static/media/light-mode.png": "/al-kalam/static/media/light-mode.8b49bce8c757f3b43b89.png",
     "static/media/night-mode.png": "/al-kalam/static/media/night-mode.7f5984cf938931c17454.png",
     "static/media/back-icon_hijau.svg": "/al-kalam/static/media/back-icon_hijau.8a29abe50fb84b9bd9beddfff9c38147.svg",
@@ -10,11 +14,11 @@
     "static/media/home.svg": "/al-kalam/static/media/home.a7ab660b70d6e563c85a1840ee658e1e.svg",
     "static/media/person.svg": "/al-kalam/static/media/person.b7f58fb9d76b963d9c446ca221f1632f.svg",
     "static/media/bookmark.svg": "/al-kalam/static/media/bookmark.846277d85555c39d581808a2404d87c1.svg",
-    "main.c235e852.css.map": "/al-kalam/static/css/main.c235e852.css.map",
-    "main.44de357c.js.map": "/al-kalam/static/js/main.44de357c.js.map"
+    "main.318ad54c.css.map": "/al-kalam/static/css/main.318ad54c.css.map",
+    "main.9361ac4b.js.map": "/al-kalam/static/js/main.9361ac4b.js.map"
   },
   "entrypoints": [
-    "static/css/main.c235e852.css",
-    "static/js/main.44de357c.js"
+    "static/css/main.318ad54c.css",
+    "static/js/main.9361ac4b.js"
   ]
 }
