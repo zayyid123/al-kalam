@@ -14,20 +14,6 @@
     -->
   <link crossorigin="use-credentials" rel="manifest" id="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <script>
-    const usesDarkMode = localStorage.getItem('DARKMODE')
-    const manifest = document.getElementById('manifest');
-
-    function switchIcon(usesDarkMode) {
-      if (usesDarkMode === 'dark') {
-        manifest.href = '%PUBLIC_URL%/manifest.json'
-      } else {
-        manifest.href = '%PUBLIC_URL%/manifest-dark.json'
-      }
-    }
-
-    switchIcon(usesDarkMode);
-  </script>
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.

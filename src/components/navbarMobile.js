@@ -32,11 +32,9 @@ const NavbarMobile = ({ page }) => {
         if (darkMode === 'dark') {
             localStorage.setItem('DARKMODE', 'light')
             setDarkMode(localStorage.getItem('DARKMODE'))
-            window.location.reload()
         } else {
             localStorage.setItem('DARKMODE', 'dark')
             setDarkMode(localStorage.getItem('DARKMODE'))
-            window.location.reload()
         }
     }
 
