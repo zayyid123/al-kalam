@@ -6,8 +6,36 @@ import darkIcon from '../assets/img/night-mode.png'
 import lightIcon from '../assets/img/light-mode.png'
 import backIcon from '../assets/icons/back-icon.svg'
 
+// inisialisasi local storage
+if (localStorage.getItem('DARKMODE') === undefined) {
+    localStorage.setItem('DARKMODE', 'dark')
+}
+
 const NavbarMobile = ({ page }) => {
-    const [dark, setDark] = React.useState(false)
+    const [darkMode, setDarkMode] = React.useState(localStorage.getItem('DARKMODE'))
+
+    React.useEffect(() => {
+        const root = window.document.documentElement
+
+        if (darkMode === 'dark') {
+            root.classList.remove('dark')
+            root.classList.add('light')
+        } else {
+            root.classList.remove('light')
+            root.classList.add('dark')
+        }
+    }, [darkMode])
+
+
+    const handleMode = () => {
+        if (darkMode === 'dark') {
+            localStorage.setItem('DARKMODE', 'light')
+            setDarkMode(localStorage.getItem('DARKMODE'))
+        } else {
+            localStorage.setItem('DARKMODE', 'dark')
+            setDarkMode(localStorage.getItem('DARKMODE'))
+        }
+    }
 
     return (
         <div className='lt:hidden bg-transparent p-3'>
@@ -23,10 +51,8 @@ const NavbarMobile = ({ page }) => {
                     }
                 </div>
                 <h1 className='font-bold text-green-800 text-lg'>{page}</h1>
-                <div>
-                    {
-                        dark ? <img className='w-[30px] h-[30px]' src={lightIcon} alt='light icon' /> : <img className='w-[30px] h-[30px]' src={darkIcon} alt='dark icon' />
-                    }
+                <div onClick={handleMode}>
+                    <img className='w-[30px] h-[30px]' src={darkMode === 'dark' ? lightIcon : darkIcon} alt='icon mode' />
                 </div>
             </div>
         </div>
