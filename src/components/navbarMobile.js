@@ -32,9 +32,11 @@ const NavbarMobile = ({ page }) => {
         if (darkMode === 'dark') {
             localStorage.setItem('DARKMODE', 'light')
             setDarkMode(localStorage.getItem('DARKMODE'))
+            window.location.reload()
         } else {
             localStorage.setItem('DARKMODE', 'dark')
             setDarkMode(localStorage.getItem('DARKMODE'))
+            window.location.reload()
         }
     }
 
@@ -43,7 +45,7 @@ const NavbarMobile = ({ page }) => {
             <div className='flex justify-between items-center'>
                 <div>
                     {
-                        page !== 'Home' ?
+                        page !== 'Al-Kalam' ?
                             <Link to={'/'}>
                                 <img className='w-[20px] h-[20px] ' src={darkMode === 'dark' ? backIconHijau : backIconPutih} alt='back icon' />
                             </Link>
