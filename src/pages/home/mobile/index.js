@@ -22,9 +22,9 @@ const Mobile = () => {
             {/* last read */}
             <div className='flex justify-between items-center drop-shadow-2xl bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] mx-4 p-3 rounded-3xl'>
                 <div>
-                    <p className='font-thin text-[0.5rem] text-white mb-3'>Last Read</p>
+                    <p className='font-thin text-xs text-white mb-3'>Last Read</p>
                     <h1 className='font-semibold text-white text-sm'>Ar-Rahman</h1>
-                    <p className='font-thin text-[0.5rem] text-white '>Verse No.1</p>
+                    <p className='font-thin text-xs text-white '>Verse No.1</p>
                     <p className='font-normal text-xs text-white '>Go to {'>'}</p>
                 </div>
                 <div>
