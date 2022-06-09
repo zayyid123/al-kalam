@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/al-kalam/static/css/main.894ae017.css",
-    "main.js": "/al-kalam/static/js/main.acb93090.js",
+    "main.css": "/al-kalam/static/css/main.671e5433.css",
+    "main.js": "/al-kalam/static/js/main.17314e43.js",
     "static/media/last-read.png": "/al-kalam/static/media/last-read.914164c2c5c8f2acc94c.png",
     "static/media/bulan.png": "/al-kalam/static/media/bulan.b092eb2692af45b45749.png",
     "static/media/quran.png": "/al-kalam/static/media/quran.fba64e3e70a581bb9cf1.png",
@@ -13,18 +13,18 @@
     "static/media/penanda-hijau.png": "/al-kalam/static/media/penanda-hijau.766e6ad232b0b40c9784.png",
     "static/media/light-mode.png": "/al-kalam/static/media/light-mode.8b49bce8c757f3b43b89.png",
     "static/media/night-mode.png": "/al-kalam/static/media/night-mode.7f5984cf938931c17454.png",
-    "static/media/img_icon_search.svg": "/al-kalam/static/media/img_icon_search.6d4fb2debf500d666d3863c69d428e3d.svg",
+    "static/media/img_icon_search.svg": "/al-kalam/static/media/img_icon_search.6d4fb2debf500d666d38.svg",
     "static/media/back-icon_hijau.svg": "/al-kalam/static/media/back-icon_hijau.8a29abe50fb84b9bd9beddfff9c38147.svg",
     "static/media/back-icon_putih.svg": "/al-kalam/static/media/back-icon_putih.1e3aa02b22942985430eecb97fefa6ac.svg",
     "index.html": "/al-kalam/index.html",
     "static/media/home.svg": "/al-kalam/static/media/home.a7ab660b70d6e563c85a1840ee658e1e.svg",
     "static/media/person.svg": "/al-kalam/static/media/person.b7f58fb9d76b963d9c446ca221f1632f.svg",
     "static/media/bookmark.svg": "/al-kalam/static/media/bookmark.846277d85555c39d581808a2404d87c1.svg",
-    "main.894ae017.css.map": "/al-kalam/static/css/main.894ae017.css.map",
-    "main.acb93090.js.map": "/al-kalam/static/js/main.acb93090.js.map"
+    "main.671e5433.css.map": "/al-kalam/static/css/main.671e5433.css.map",
+    "main.17314e43.js.map": "/al-kalam/static/js/main.17314e43.js.map"
   },
   "entrypoints": [
-    "static/css/main.894ae017.css",
-    "static/js/main.acb93090.js"
+    "static/css/main.671e5433.css",
+    "static/js/main.17314e43.js"
   ]
 }
