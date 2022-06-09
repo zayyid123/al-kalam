@@ -6,3 +6,9 @@
 .font-quran {
     font-family: 'litelpmq', 'Quicksand';
 }
+
+.input-search {
+    background-image: url('../../../assets/icons/img_icon_search.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+}
