@@ -12,7 +12,7 @@ if (localStorage.getItem('DARKMODE') === undefined) {
     localStorage.setItem('DARKMODE', 'dark')
 }
 
-const NavbarMobile = ({ page }) => {
+const NavbarMobile = ({ page, back }) => {
     const [darkMode, setDarkMode] = React.useState(localStorage.getItem('DARKMODE'))
 
     React.useEffect(() => {
@@ -44,7 +44,7 @@ const NavbarMobile = ({ page }) => {
                 <div>
                     {
                         page !== 'Al-Kalam' ?
-                            <Link to={'/al-kalam'}>
+                            <Link to={back}>
                                 <img className='w-[20px] h-[20px] ' src={darkMode === 'dark' ? backIconHijau : backIconPutih} alt='back icon' />
                             </Link>
                             :
