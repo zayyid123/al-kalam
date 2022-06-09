@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'litelpmq';
+    src: url('../../../assets/fonts/litelpmq.woff2');
+}
+
+.font-quran {
+    font-family: 'litelpmq', 'Quicksand';
+}

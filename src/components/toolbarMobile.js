@@ -43,6 +43,7 @@ const ToolBarMobile = () => {
                         border-4 
                         border-white 
                         group-hover:border-[#a2ebfc]
+                        group-hover:bg-[#F8A95D]
                         dark:group-hover:border-[#211E2D] 
                         '>
                                         <img className='w-[25px] h-[25px]' src={res.icon} alt={res.name} />
