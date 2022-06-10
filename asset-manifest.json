@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/al-kalam/static/css/main.11255822.css",
-    "main.js": "/al-kalam/static/js/main.7d76b19e.js",
+    "main.css": "/al-kalam/static/css/main.1d598457.css",
+    "main.js": "/al-kalam/static/js/main.891d3957.js",
     "static/media/last-read.png": "/al-kalam/static/media/last-read.914164c2c5c8f2acc94c.png",
     "static/media/bulan.png": "/al-kalam/static/media/bulan.b092eb2692af45b45749.png",
     "static/media/quran.png": "/al-kalam/static/media/quran.fba64e3e70a581bb9cf1.png",
@@ -15,18 +15,21 @@
     "static/media/night-mode.png": "/al-kalam/static/media/night-mode.7f5984cf938931c17454.png",
     "static/media/basmalah-dark.png": "/al-kalam/static/media/basmalah-dark.c69bf1caae67d6bd4ba3.png",
     "static/media/basmalah-light.png": "/al-kalam/static/media/basmalah-light.929837677afd93ab645d.png",
+    "static/media/share.svg": "/al-kalam/static/media/share.a3b401d7ebf2b0d1cdd5d84bdd224d6d.svg",
     "static/media/img_icon_search.svg": "/al-kalam/static/media/img_icon_search.6d4fb2debf500d666d38.svg",
+    "static/media/pin.svg": "/al-kalam/static/media/pin.9133e125b2389a8d6f2d023b27e97824.svg",
+    "static/media/pined.svg": "/al-kalam/static/media/pined.2e5f97631249c208a7eb83638a9fcb3b.svg",
     "static/media/back-icon_hijau.svg": "/al-kalam/static/media/back-icon_hijau.8a29abe50fb84b9bd9beddfff9c38147.svg",
     "static/media/back-icon_putih.svg": "/al-kalam/static/media/back-icon_putih.1e3aa02b22942985430eecb97fefa6ac.svg",
     "index.html": "/al-kalam/index.html",
     "static/media/home.svg": "/al-kalam/static/media/home.a7ab660b70d6e563c85a1840ee658e1e.svg",
     "static/media/person.svg": "/al-kalam/static/media/person.b7f58fb9d76b963d9c446ca221f1632f.svg",
     "static/media/bookmark.svg": "/al-kalam/static/media/bookmark.846277d85555c39d581808a2404d87c1.svg",
-    "main.11255822.css.map": "/al-kalam/static/css/main.11255822.css.map",
-    "main.7d76b19e.js.map": "/al-kalam/static/js/main.7d76b19e.js.map"
+    "main.1d598457.css.map": "/al-kalam/static/css/main.1d598457.css.map",
+    "main.891d3957.js.map": "/al-kalam/static/js/main.891d3957.js.map"
   },
   "entrypoints": [
-    "static/css/main.11255822.css",
-    "static/js/main.7d76b19e.js"
+    "static/css/main.1d598457.css",
+    "static/js/main.891d3957.js"
   ]
 }
