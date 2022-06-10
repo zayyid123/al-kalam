@@ -8,7 +8,7 @@ import './style.css'
 import penandaHijau from '../../../assets/img/penanda-hijau.png'
 import penandaPutih from '../../../assets/img/penanda-putih.png'
 
-const Mobile = () => {
+const Mobile = ({ nomorSurah, setNomorSurah }) => {
     const [allData, setAllData] = useState([]);
     const [valueSearch, setvalueSearch] = React.useState("");
 
@@ -20,6 +20,10 @@ const Mobile = () => {
 
         getAllData()
     }, [])
+
+    const handleClick = (data) => {
+        setNomorSurah(data)
+    }
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -40,7 +44,7 @@ const Mobile = () => {
                     .filter((data) => data.nama_latin.toLowerCase().includes(valueSearch.toLowerCase()))
                     .map((res, index) =>
                         <div className='m-4' key={index + 'dataQuran'}>
-                            <Link to={'/al-kalam/surah'}>
+                            <Link to={'/al-kalam/surah'} onClick={() => handleClick(res.nomor)}>
                                 <div className='flex justify-between items-center'>
                                     <div className='flex justify-center items-center'>
                                         <div className='py-3 pr-3 relative'>

@@ -5,6 +5,8 @@ import ToolBarMobile from '../../components/toolbarMobile';
 import list from '../../config/listRoute'
 
 const MainApp = () => {
+    const [nomorSurah, setNomorSurah] = React.useState(0)
+
     return (
         <>
             <Router>
@@ -12,7 +14,7 @@ const MainApp = () => {
                 <Routes >
                     {
                         list.map((item) =>
-                            <Route key={item.name} exact path={item.path} element={<item.component />} />
+                            <Route key={item.name} exact path={item.path} element={<item.component nomorSurah={nomorSurah} setNomorSurah={setNomorSurah} />} />
                         )
                     }
                 </Routes>
