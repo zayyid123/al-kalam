@@ -2,12 +2,12 @@ import React from 'react'
 import Desktop from './desktop'
 import Mobile from './mobile'
 
-const Home = () => {
+const Home = ({ nomorSurah, setNomorSurah }) => {
 
     return (
         <>
             <Desktop />
-            <Mobile />
+            <Mobile nomorSurah={nomorSurah} setNomorSurah={setNomorSurah} />
         </>
     )
 }

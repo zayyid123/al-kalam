@@ -9,10 +9,14 @@ import './index.css'
 import penandaPutih from '../../../assets/img/penanda-putih.png'
 import basmalahLight from '../../../assets/img/basmalah-light.png'
 import basmalahDark from '../../../assets/img/basmalah-dark.png'
+import shareIcon from '../../../assets/icons/share.svg'
+import pinIcon from '../../../assets/icons/pin.svg'
+import pinedIcon from '../../../assets/icons/pined.svg'
 
 const Mobile = ({ nomorSurah, setNomorSurah }) => {
     const [allData, setallData] = useState([])
     const [ayat, setayat] = useState([])
+    const [dataPined, setDataPined] = useState(JSON.parse(localStorage.getItem('PINED')) || { surah: 'Al-Fatihah', ayat: '1', noSurah: '1' })
 
     useEffect(() => {
         const getData = async () => {
@@ -24,7 +28,16 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
         getData()
     }, [])
 
-    console.log(allData)
+    const handleShareWa = (index) => {
+        window.open(`https://api.whatsapp.com/send/?text=${ayat[index].ar + ayat[index].idn + ' ( QS. ' + allData.nama_latin
+            + ' - ' + ayat[index].nomor + ' ).'}&app_absent=0`, '_blank')
+    }
+
+    const handlePinedUnpinde = (index) => {
+        localStorage.setItem('PINED', JSON.stringify({ surah: allData.nama_latin, ayat: ayat[index].nomor, noSurah: allData.nomor }))
+        const mydata = localStorage.getItem('PINED')
+        setDataPined(JSON.parse(mydata))
+    }
 
     return (
         <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
@@ -55,6 +68,22 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                 {
                     ayat.map((res, index) =>
                         <div className='px-4' key={index + 'ayat'}>
+                            <div className='flex justify-between items-center rounded-3xl bg-white mb-4 p-1'>
+                                <div className='flex justify-center items-center rounded-[50%] bg-[#32B0A8] w-[22px] h-[22px] text-[0.7rem] text-white text-center'>
+                                    <h1>{res.nomor}</h1>
+                                </div>
+
+                                <div className='flex justify-between items-center'>
+                                    <div onClick={() => handlePinedUnpinde(index)}>
+                                        <img className='w-[20px] h-[20px] mx-2' src={dataPined.surah === allData.nama_latin ? dataPined.ayat === res.nomor ? pinedIcon : pinIcon : pinIcon} alt='pined icon' />
+                                    </div>
+
+                                    <div onClick={() => handleShareWa(index)}>
+                                        <img className='w-[20px] h-[20px] mx-2' src={shareIcon} alt='sahre icon' />
+                                    </div>
+                                </div>
+                            </div>
+
                             <h1 className='font-quran font-bold text-xl text-[#0A5356] dark:text-white text-right leading-10 mb-4'>{res.ar}</h1>
 
                             <h1 className='text-left font-light text-sm text-green-800 dark:text-white mb-2' >{Parser(res.tr)}</h1>

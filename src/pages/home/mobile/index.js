@@ -10,7 +10,13 @@ import quran3 from '../../../assets/img/quran3.png'
 import bookmarkQuran from '../../../assets/img/bookmark-quran.png'
 import bulan from '../../../assets/img/bulan.png'
 
-const Mobile = () => {
+const Mobile = ({ nomorSurah, setNomorSurah }) => {
+    const [dataPined, setDataPined] = React.useState(JSON.parse(localStorage.getItem('PINED')) || { surah: 'Al-Fatihah', ayat: '1', noSurah: '1' })
+
+    const handleClick = (data) => {
+        setNomorSurah(data)
+    }
+
     return (
         <div className='lt:hidden w-full h-[100vh] bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
             <NavbarMobile page={'Al-Kalam'} back={'/al-kalam'} />
@@ -21,17 +27,19 @@ const Mobile = () => {
             </div>
 
             {/* last read */}
-            <div className='flex justify-between items-center text-white drop-shadow-2xl bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 rounded-3xl'>
-                <div>
-                    <p className='font-thin text-xs mb-3'>Last Read</p>
-                    <h1 className='font-semibold text-sm'>Ar-Rahman</h1>
-                    <p className='font-thin text-xs '>Verse No.1</p>
-                    <p className='font-normal text-xs '>Go to {'>'}</p>
+            <Link to={'/al-kalam/surah'} onClick={() => handleClick(dataPined.noSurah)} >
+                <div className='flex justify-between items-center text-white drop-shadow-2xl bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 rounded-3xl'>
+                    <div>
+                        <p className='font-thin text-xs mb-3'>Last Read</p>
+                        <h1 className='font-semibold text-sm'>{dataPined.surah}</h1>
+                        <p className='font-thin text-xs '>Verse No. {dataPined.ayat}</p>
+                        <p className='font-normal text-xs '>Go to {'>'}</p>
+                    </div>
+                    <div>
+                        <img className='w-[90px] h-[90px]' src={lastRead} alt='icon last read' />
+                    </div>
                 </div>
-                <div>
-                    <img className='w-[90px] h-[90px]' src={lastRead} alt='icon last read' />
-                </div>
-            </div>
+            </Link>
 
             {/* all */}
             <div className='grid grid-cols-2 gap-4 m-4'>
