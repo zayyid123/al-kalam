@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import NavbarMobile from '../../../components/navbarMobile'
 import { getDetailSurah } from '../../../service/axios'
+import Parser from 'html-react-parser';
 import './index.css'
 
 // img
@@ -25,7 +26,6 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
     console.log(allData)
 
-
     return (
         <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
             <NavbarMobile page={'Surah'} back={'/al-kalam/quran'} />
@@ -48,17 +48,25 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                 <img className='hidden dark:block w-[250px]' src={basmalahDark} alt='icon basmalah dark' />
             </div>
 
+            <br />
+
             {/* ayat */}
             <div>
                 {
                     ayat.map((res, index) =>
-                        <div className='mt-8' key={index + 'ayat'}>
-                            <h1 className='font-quran text-right indent-4 mb-3'>{res.ar}</h1>
-                            <p className='text-left'>{res.idn}</p>
+                        <div className='px-4' key={index + 'ayat'}>
+                            <h1 className='font-quran font-bold text-xl text-[#0A5356] dark:text-white text-right leading-10 mb-4'>{res.ar}</h1>
+
+                            <h1 className='text-left font-light text-sm text-green-800 dark:text-white mb-2' >{Parser(res.tr)}</h1>
+
+                            <p className='text-left font-light dark:text-gray-400 text-sm mb-3'>{res.idn}</p>
+
+                            <hr /> <br />
                         </div>
                     )
                 }
             </div>
+            <br /><br /><br />
         </div>
     )
 }
