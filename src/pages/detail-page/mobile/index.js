@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import NavbarMobile from '../../../components/navbarMobile'
 import { getDetailSurah } from '../../../service/axios'
 import Parser from 'html-react-parser';
+import Swal from 'sweetalert2';
 import './index.css'
 
 // img
@@ -33,14 +34,20 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
             + ' - ' + ayat[index].nomor + ' ).'}&app_absent=0`, '_blank')
     }
 
-    const handlePinedUnpinde = (index) => {
+    const handlePinedUnpined = (index) => {
         localStorage.setItem('PINED', JSON.stringify({ surah: allData.nama_latin, ayat: ayat[index].nomor, noSurah: allData.nomor }))
         const mydata = localStorage.getItem('PINED')
         setDataPined(JSON.parse(mydata))
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your last read have been added',
+        })
     }
 
     return (
-        <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
+        <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
             <NavbarMobile page={'Surah'} back={'/al-kalam/quran'} />
 
             <div className='flex flex-col justify-center items-center text-white drop-shadow-2xl bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 mt-6 rounded-3xl'>
@@ -74,7 +81,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                                 </div>
 
                                 <div className='flex justify-between items-center'>
-                                    <div onClick={() => handlePinedUnpinde(index)}>
+                                    <div onClick={() => handlePinedUnpined(index)}>
                                         <img className='w-[20px] h-[20px] mx-2' src={dataPined.surah === allData.nama_latin ? dataPined.ayat === res.nomor ? pinedIcon : pinIcon : pinIcon} alt='pined icon' />
                                     </div>
 

@@ -18,7 +18,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
     }
 
     return (
-        <div className='lt:hidden w-full h-[100vh] bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
+        <div className='lt:hidden w-full h-[100vh] bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
             <NavbarMobile page={'Al-Kalam'} back={'/al-kalam'} />
 
             {/* quran */}

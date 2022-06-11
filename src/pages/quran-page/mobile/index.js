@@ -32,11 +32,11 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
     React.useEffect(() => { }, [valueSearch]);
 
     return (
-        <div className='lt:hidden min-h-full w-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#211E2D] dark:via-[#211E2D] dark:to-[#211E2D] dark:text-white'>
+        <div className='lt:hidden min-h-full w-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
             <NavbarMobile page={'Quran'} back={'/al-kalam'} />
 
             <div className='flex justify-center items-center'>
-                <input onChange={handleChange} className='input-search bg-[#cbeef7] dark:bg-[#2D2D3D] rounded-lg w-[70%] p-2 my-4' type='text' placeholder='Search' ></input>
+                <input onChange={handleChange} className='input-search bg-[#cbeef7] dark:bg-[#32383D] rounded-lg w-[70%] p-2 my-4' type='text' placeholder='Search' ></input>
             </div>
 
             {
@@ -62,7 +62,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                                         </div>
                                         <div>
                                             <h1 className='font-semibold text-lg'>{res.nama_latin}</h1>
-                                            <p className='font-thin text-gray-600 text-xs'>{res.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {res.jumlah_ayat} ayat</p>
+                                            <p className='font-thin text-[#32B0A8] text-xs'>{res.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {res.jumlah_ayat} ayat</p>
                                         </div>
                                     </div>
 
