@@ -62,7 +62,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                                         </div>
                                         <div>
                                             <h1 className='font-semibold text-lg'>{res.nama_latin}</h1>
-                                            <p className='font-thin text-[#32B0A8] text-xs'>{res.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {res.jumlah_ayat} ayat</p>
+                                            <p className='font-thin text-zinc-900 dark:text-[#32B0A8] text-xs'>{res.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {res.jumlah_ayat} ayat</p>
                                         </div>
                                     </div>
 
