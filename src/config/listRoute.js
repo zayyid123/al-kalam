@@ -1,3 +1,4 @@
+import Adzan from "../pages/adzan";
 import Bookmark from "../pages/bookmark";
 import DetailSurah from "../pages/detail-page";
 import Home from "../pages/home";
@@ -29,6 +30,11 @@ const list = [
         path: "/al-kalam/surah",
         name: "DETAIL-SURAH",
         component: DetailSurah,
+    },
+    {
+        path: "/al-kalam/adzan",
+        name: "ADZAN",
+        component: Adzan,
     },
 ]
 

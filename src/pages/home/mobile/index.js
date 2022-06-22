@@ -60,13 +60,15 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
                 {/* reminder */}
                 <div className='bg-gradient-to-b from-[#c55fa8] to-[#CC80B7] dark:from-emerald-900 dark:to-emerald-600 rounded-3xl drop-shadow-2xl p-3 h-[150px] text-white'>
-                    <div>
-                        <img className='w-[58px] h-[58px] mt-1 mb-6' src={bulan} alt='icon bulan' />
-                    </div>
-                    <div>
-                        <h1 className='font-semibold text-white text-sm'>Memorize</h1>
-                        <p className='font-normal text-xs text-white '>Go to {'>'}</p>
-                    </div>
+                    <Link to={'/al-kalam/adzan'}>
+                        <div>
+                            <img className='w-[58px] h-[58px] mt-1 mb-6' src={bulan} alt='icon bulan' />
+                        </div>
+                        <div>
+                            <h1 className='font-semibold text-white text-sm'>Memorize</h1>
+                            <p className='font-normal text-xs text-white '>Go to {'>'}</p>
+                        </div>
+                    </Link>
                 </div>
 
                 {/* bookmarks */}
