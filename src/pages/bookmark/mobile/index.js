@@ -55,7 +55,7 @@ const Mobile = ({ setNomorSurah }) => {
                 setdataBookmarked(JSON.parse(localStorage.getItem('BOOKMARKED')))
                 Swal.fire(
                     'Deleted!',
-                    'Your file has been deleted.',
+                    'Your data has been deleted.',
                     'success'
                 )
             } else if (
@@ -63,7 +63,7 @@ const Mobile = ({ setNomorSurah }) => {
             ) {
                 Swal.fire(
                     'Cancelled',
-                    'Your imaginary file is safe :)',
+                    'Your data is safe :)',
                     'error'
                 )
             }
