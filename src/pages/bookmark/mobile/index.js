@@ -36,12 +36,6 @@ const Mobile = ({ setNomorSurah }) => {
     const handleRemove = (myData) => {
         const dataStorage = localStorage.getItem('BOOKMARKED')
         const dataParser = JSON.parse(dataStorage)
-        dataParser.forEach((data, index) => {
-            if (data === myData) {
-                dataParser.splice(index, 1)
-                localStorage.setItem('BOOKMARKED', JSON.stringify(dataParser))
-            }
-        })
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -52,6 +46,12 @@ const Mobile = ({ setNomorSurah }) => {
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
+                dataParser.forEach((data, index) => {
+                    if (data === myData) {
+                        dataParser.splice(index, 1)
+                        localStorage.setItem('BOOKMARKED', JSON.stringify(dataParser))
+                    }
+                })
                 setdataBookmarked(JSON.parse(localStorage.getItem('BOOKMARKED')))
                 Swal.fire(
                     'Deleted!',
