@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 import NavbarMobile from '../../../components/navbarMobile'
 import { Link } from 'react-router-dom'
 import { getAllSurah } from '../../../service/axios'
+import Swal from 'sweetalert2'
 
 // img
 import bookmarkIcon from '../../../assets/img/bookmark-quran.png'
+import deleteIcon from '../../../assets/img/delete.png'
 
 const Mobile = ({ setNomorSurah }) => {
     const [dataBookmarked, setdataBookmarked] = useState(JSON.parse(localStorage.getItem('BOOKMARKED')) || ['Data Kosong'])
@@ -40,7 +42,32 @@ const Mobile = ({ setNomorSurah }) => {
                 localStorage.setItem('BOOKMARKED', JSON.stringify(dataParser))
             }
         })
-        setdataBookmarked(JSON.parse(localStorage.getItem('BOOKMARKED')))
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                setdataBookmarked(JSON.parse(localStorage.getItem('BOOKMARKED')))
+                Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                )
+            } else if (
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                Swal.fire(
+                    'Cancelled',
+                    'Your imaginary file is safe :)',
+                    'error'
+                )
+            }
+        })
     }
 
 
@@ -84,7 +111,7 @@ const Mobile = ({ setNomorSurah }) => {
                                             </div>
                                         </Link>
                                         <div onClick={() => handleRemove(res)}>
-                                            <h1 className='text-red-500'>Hapus</h1>
+                                            <img src={deleteIcon} alt='icon delete' className='w-[30px]' />
                                         </div>
                                     </div>
                                 </div>
