@@ -16,6 +16,8 @@ import pinedIcon from '../../../assets/icons/pined.svg'
 import playIcon from '../../../assets/icons/play-audio.svg'
 import pauseIcon from '../../../assets/icons/pause-audio.svg'
 import navigationIcon from '../../../assets/icons/navigation-audio.svg'
+import bookmarkedIcon from '../../../assets/icons/bookmarked_putih.svg'
+import bookmarkIcon from '../../../assets/icons/bookmark_putih.svg'
 
 const Mobile = ({ nomorSurah, setNomorSurah }) => {
     const [allData, setallData] = useState([])
@@ -24,6 +26,8 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
     const [progress, setprogress] = useState('')
     const audio = document.getElementById('myAudio');
     const [dataPined, setDataPined] = useState(JSON.parse(localStorage.getItem('PINED')) || { surah: 'Al-Fatihah', ayat: '1', noSurah: '1' })
+    const [dataBookmarked, setdataBookmarked] = useState(JSON.parse(localStorage.getItem('BOOKMARKED')))
+    const [isBookmarked, setisBookmarked] = useState(false)
 
     useEffect(() => {
         const getData = async () => {
@@ -34,6 +38,19 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
         getData()
     }, [])
+
+    useEffect(() => {
+        const dataStorage = localStorage.getItem('BOOKMARKED')
+        if (dataStorage !== null) {
+            const myAllData = JSON.parse(dataStorage)
+            myAllData.forEach((data, index) => {
+                if (data === nomorSurah) {
+                    setisBookmarked(true)
+                }
+            })
+        }
+    }, [])
+
 
     const handleShareWa = (index) => {
         window.open(`https://api.whatsapp.com/send/?text=${ayat[index].ar + ayat[index].idn + ' ( QS. ' + allData.nama_latin
@@ -93,20 +110,62 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
         }
     }
 
+    const handleChangeBookmarked = () => {
+        const data = localStorage.getItem('BOOKMARKED')
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your surah have been bookmarked',
+        })
+        setisBookmarked(true)
+        if (data === null) {
+            localStorage.setItem('BOOKMARKED', JSON.stringify([nomorSurah]))
+        } else {
+            const dataParser = JSON.parse(data)
+            const myAllData = [
+                ...dataParser, nomorSurah
+            ]
+            localStorage.setItem('BOOKMARKED', JSON.stringify(myAllData))
+        }
+    }
+
+    const handleChangeUnBookmarked = () => {
+        const dataStorage = localStorage.getItem('BOOKMARKED')
+        Swal.fire({
+            icon: 'success',
+            title: 'Success',
+            text: 'Your surah have been unbookmarked',
+        })
+        setisBookmarked(false)
+        const dataParser = JSON.parse(dataStorage)
+        dataParser.forEach((data, index) => {
+            if (data === nomorSurah) {
+                dataParser.splice(index, 1)
+                localStorage.setItem('BOOKMARKED', JSON.stringify(dataParser))
+            }
+        })
+    }
+
     return (
         <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
             <NavbarMobile page={'Surah'} back={'/al-kalam/quran'} />
 
-            <div className='flex flex-col justify-center items-center text-white bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 mt-6 rounded-3xl'>
+            <div className='text-white bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 mt-6 rounded-3xl'>
                 <div className='flex flex-col justify-center items-center'>
-                    <img className='w-[40px] h-[40px]' src={penandaPutih} alt='icon penanda putih' />
-                    <p className='absolute z-10 text-xs'>{nomorSurah}</p>
+                    <div className='flex flex-col justify-center items-center'>
+                        <img className='w-[40px] h-[40px]' src={penandaPutih} alt='icon penanda putih' />
+                        <p className='absolute z-10 text-xs'>{nomorSurah}</p>
+                    </div>
+
+                    <div className='mt-2 text-center'>
+                        <h1 className='font-bold text-xl'>{allData.nama_latin}</h1>
+                        <p className='text-lg'>{allData.arti}</p>
+                        <p className='font-thin mt-5 text-xs'>{allData.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {allData.jumlah_ayat} ayat</p>
+                    </div>
                 </div>
 
-                <div className='mt-2 text-center'>
-                    <h1 className='font-bold text-xl'>{allData.nama_latin}</h1>
-                    <p className='text-lg'>{allData.arti}</p>
-                    <p className='font-thin mt-5 text-xs'>{allData.tempat_turun === 'mekah' ? 'Makiyah' : 'Madaniyah'} - {allData.jumlah_ayat} ayat</p>
+                <div onClick={isBookmarked ? handleChangeUnBookmarked : handleChangeBookmarked} className='absolute top-[93px] right-[21px]'>
+                    <img className='w-[30px] h-[30px] mx-2' src={isBookmarked ? bookmarkedIcon : bookmarkIcon} alt='sahre icon' />
                 </div>
             </div>
 

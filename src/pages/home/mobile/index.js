@@ -71,15 +71,17 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
                 {/* bookmarks */}
                 <div className='bg-gradient-to-b from-[#5274c9] to-[#8AA5E9] dark:from-purple-900 dark:to-purple-500 rounded-3xl drop-shadow-2xl p-3 h-[200px] text-white row-span-2'>
-                    <div>
-                        <img className='w-[70px] h-[70px] mb-3' src={bookmarkQuran} alt='bookmark quran' />
-                    </div>
-                    <br />
-                    <br />
-                    <div>
-                        <h1 className='font-semibold text-white text-sm'>Bookmarks</h1>
-                        <p className='font-normal text-xs text-white '>Go to {'>'}</p>
-                    </div>
+                    <Link to={'/al-kalam/bookmark'}>
+                        <div>
+                            <img className='w-[70px] h-[70px] mb-3' src={bookmarkQuran} alt='bookmark quran' />
+                        </div>
+                        <br />
+                        <br />
+                        <div>
+                            <h1 className='font-semibold text-white text-sm'>Bookmarks</h1>
+                            <p className='font-normal text-xs text-white '>Go to {'>'}</p>
+                        </div>
+                    </Link>
                 </div>
 
                 {/* tajwid */}
