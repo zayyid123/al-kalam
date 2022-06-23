@@ -43,7 +43,7 @@ const NavbarMobile = ({ page, back }) => {
             <div className='flex justify-between items-center'>
                 <div>
                     {
-                        page !== 'Al-Kalam' ?
+                        page !== '/' ?
                             <Link to={back}>
                                 <img className='w-[20px] h-[20px] ' src={darkMode === 'dark' ? backIconHijau : backIconPutih} alt='back icon' />
                             </Link>

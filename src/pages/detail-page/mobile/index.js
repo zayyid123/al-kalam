@@ -148,7 +148,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
     return (
         <div className='lt:hidden w-full min-h-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
-            <NavbarMobile page={'Surah'} back={'/al-kalam/quran'} />
+            <NavbarMobile page={'Surah'} back={'/quran'} />
 
             <div className='text-white bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 mt-6 rounded-3xl'>
                 <div className='flex flex-col justify-center items-center'>

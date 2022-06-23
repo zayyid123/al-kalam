@@ -19,7 +19,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
     return (
         <div className='lt:hidden w-full h-[100vh] bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
-            <NavbarMobile page={'Al-Kalam'} back={'/al-kalam'} />
+            <NavbarMobile page={'Al-Kalam'} back={'/'} />
 
             {/* quran */}
             <div className='flex justify-center items-center'>
@@ -27,7 +27,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
             </div>
 
             {/* last read */}
-            <Link to={'/al-kalam/surah'} onClick={() => handleClick(dataPined.noSurah)} >
+            <Link to={'/surah'} onClick={() => handleClick(dataPined.noSurah)} >
                 <div className='flex justify-between items-center text-white drop-shadow-2xl bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 rounded-3xl'>
                     <div>
                         <p className='font-thin text-xs mb-3'>Last Read</p>
@@ -45,7 +45,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
             <div className='grid grid-cols-2 gap-4 m-4'>
                 {/* quran */}
                 <div className='bg-gradient-to-b from-[#3295ac] to-[#4fc8e4] dark:from-purple-900 dark:to-purple-600 rounded-3xl drop-shadow-2xl p-3 h-[200px] text-white row-span-2'>
-                    <Link to={'/al-kalam/quran'}>
+                    <Link to={'/quran'}>
                         <div>
                             <img className='w-[75px] h-[75px]' src={quran2} alt='icon quran 2' />
                         </div>
@@ -60,7 +60,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
                 {/* reminder */}
                 <div className='bg-gradient-to-b from-[#c55fa8] to-[#CC80B7] dark:from-emerald-900 dark:to-emerald-600 rounded-3xl drop-shadow-2xl p-3 h-[150px] text-white'>
-                    <Link to={'/al-kalam/adzan'}>
+                    <Link to={'/adzan'}>
                         <div>
                             <img className='w-[58px] h-[58px] mt-1 mb-6' src={bulan} alt='icon bulan' />
                         </div>
@@ -73,7 +73,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
                 {/* bookmarks */}
                 <div className='bg-gradient-to-b from-[#5274c9] to-[#8AA5E9] dark:from-purple-900 dark:to-purple-500 rounded-3xl drop-shadow-2xl p-3 h-[200px] text-white row-span-2'>
-                    <Link to={'/al-kalam/bookmark'}>
+                    <Link to={'/bookmark'}>
                         <div>
                             <img className='w-[70px] h-[70px] mb-3' src={bookmarkQuran} alt='bookmark quran' />
                         </div>

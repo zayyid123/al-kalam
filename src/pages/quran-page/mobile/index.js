@@ -33,7 +33,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
 
     return (
         <div className='lt:hidden min-h-full w-full bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C] dark:text-white'>
-            <NavbarMobile page={'Quran'} back={'/al-kalam'} />
+            <NavbarMobile page={'Quran'} back={'/'} />
 
             <div className='flex justify-center items-center'>
                 <input onChange={handleChange} className='input-search bg-[#cbeef7] dark:bg-[#32383D] rounded-lg w-[70%] p-2 my-4' type='text' placeholder='Search' ></input>
@@ -44,7 +44,7 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                     .filter((data) => data.nama_latin.toLowerCase().includes(valueSearch.toLowerCase()))
                     .map((res, index) =>
                         <div className='m-4' key={index + 'dataQuran'}>
-                            <Link to={'/al-kalam/surah'} onClick={() => handleClick(res.nomor)}>
+                            <Link to={'/surah'} onClick={() => handleClick(res.nomor)}>
                                 <div className='flex justify-between items-center'>
                                     <div className='flex justify-center items-center'>
                                         <div className='py-3 pr-3 relative'>

@@ -73,7 +73,7 @@ const Mobile = ({ setNomorSurah }) => {
 
     return (
         <div className='lt:hidden w-full min-h-[100vh] bg-gradient-to-t from-[#a2ebfc] via-[#bfecf7] to-[#e8fbff] dark:from-[#22282C] dark:via-[#22282C] dark:to-[#22282C]'>
-            <NavbarMobile page={'Bookmark'} back={'/al-kalam'} />
+            <NavbarMobile page={'Bookmark'} back={'/'} />
             <div className='flex flex-col justify-center items-center text-white bg-gradient-to-r from-[#2AB2AF] to-[#7DC694] dark:from-[#19b1ae] dark:to-[#45fffc] mx-4 p-3 mt-6 rounded-3xl'>
                 <div className='flex flex-col justify-center items-center bg-white p-1 rounded-lg shadow-sm'>
                     <img className='w-[40px] h-[40px]' src={bookmarkIcon} alt='icon penanda putih' />
@@ -99,7 +99,7 @@ const Mobile = ({ setNomorSurah }) => {
                                 resSurah.nomor === res &&
                                 <div key={'dataBookmarked' + index}>
                                     <div className='flex justify-between items-center bg-white mx-4 mb-3 p-3 rounded-lg'>
-                                        <Link to={'/al-kalam/surah'} onClick={() => handleClick(res)}>
+                                        <Link to={'/surah'} onClick={() => handleClick(res)}>
                                             <div className='flex items-center'>
                                                 <div className='bg-[#32B0A8] text-white p-1 rounded-lg min-w-[40px] text-center'>
                                                     <h1>{res}</h1>
