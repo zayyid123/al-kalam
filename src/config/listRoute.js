@@ -7,32 +7,32 @@ import QuranPage from "../pages/quran-page";
 
 const list = [
     {
-        path: "/al-kalam",
+        path: "/",
         name: "HOME",
         component: Home,
     },
     {
-        path: "/al-kalam/bookmark",
+        path: "/bookmark",
         name: "BOOKMARK",
         component: Bookmark,
     },
     {
-        path: "/al-kalam/profile",
+        path: "/profile",
         name: "PROFILE",
         component: Profile,
     },
     {
-        path: "/al-kalam/quran",
+        path: "/quran",
         name: "QURAN",
         component: QuranPage,
     },
     {
-        path: "/al-kalam/surah",
+        path: "/surah",
         name: "DETAIL-SURAH",
         component: DetailSurah,
     },
     {
-        path: "/al-kalam/adzan",
+        path: "/adzan",
         name: "ADZAN",
         component: Adzan,
     },
