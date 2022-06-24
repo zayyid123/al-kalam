@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react'
 import NavbarMobile from '../../../components/navbarMobile'
 import { getKota, getAdzan } from '../../../service/axios'
@@ -15,7 +13,6 @@ const Mobile = () => {
     const [time, settime] = useState(moment().format('LTS'))
     const [today, settoday] = useState('')
     const [myCity, setmyCity] = useState('ambarawa')
-    const date = new Date()
     const year = moment().format('YYYY');
     const month = moment().format('MM');
     const day = moment().format('DD');
@@ -38,7 +35,7 @@ const Mobile = () => {
         }
 
         getDataAdzan(submitCity)
-    }, [submitCity])
+    }, [month, submitCity, year])
 
 
     useEffect(() => {
@@ -48,7 +45,7 @@ const Mobile = () => {
                 settodayAdzan(res)
             }
         })
-    }, [dataAdzan])
+    }, [dataAdzan, day, month, year])
 
     const refreshTime = () => {
         settime(moment().format('LTS'))
@@ -84,7 +81,7 @@ const Mobile = () => {
 
                 <div className='mt-2 text-center'>
                     <h1 className='font-bold text-3xl'>{time}</h1>
-                    <p className='font-thin text-2xl'>Maghrib</p>
+                    <p className='font-thin text-2xl'>Adzan Sholat</p>
                     <p className='font-thin'>{today}</p>
                 </div>
             </div>
