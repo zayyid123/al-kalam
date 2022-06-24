@@ -99,20 +99,20 @@ const Mobile = () => {
                             )
                         }
                     </datalist>
-                    <button type='submit' className='bg-white dark:bg-[#2D2D3D] rounded-lg p-2'>Submit</button>
+                    <button type='submit' className='bg-white dark:bg-teal-600 dark:text-white rounded-lg p-2'>Submit</button>
                 </form>
             </div>
 
 
             <div className='text-center mt-3 mx-4 p-3 rounded-3xl bg-white'>
-                <h1 className='mb-2 w-full bg-teal-600 p-2 font-bold text-xl rounded-lg capitalize '>{submitCity}</h1>
+                <h1 className='mb-2 w-full text-white bg-teal-600 p-2 font-bold text-xl rounded-lg capitalize '>{submitCity}</h1>
                 <div className='flex justify-evenly'>
-                    <div className='px-2'>
-                        <p className='py-2 px-2'>Subuh</p>
-                        <p className='py-2 px-2'>Dzuhur</p>
-                        <p className='py-2 px-2'>Ashr</p>
-                        <p className='py-2 px-2'>Magrib</p>
-                        <p className='py-2 px-2'>Isya</p>
+                    <div className='px-2 text-left'>
+                        <p className='py-2 px-2'>Subuh :</p>
+                        <p className='py-2 px-2'>Dzuhur :</p>
+                        <p className='py-2 px-2'>Ashr :</p>
+                        <p className='py-2 px-2'>Magrib :</p>
+                        <p className='py-2 px-2'>Isya :</p>
                     </div>
                     <div className='px-2'>
                         <p className='py-2 px-2'>{todayAdzan.shubuh}</p>
