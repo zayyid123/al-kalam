@@ -86,15 +86,17 @@ const Mobile = ({ nomorSurah, setNomorSurah }) => {
                     </Link>
                 </div>
 
-                {/* tajwid */}
+                {/* Doa */}
                 <div className='bg-gradient-to-b from-[#7446ac] to-[#A781D7] dark:from-emerald-900 dark:to-emerald-500 rounded-3xl drop-shadow-2xl p-3 h-[150px] text-white'>
-                    <div>
-                        <img className='w-[80px] h-[80px] mt-[-10px] mb-3' src={quran3} alt='icon quran 3' />
-                    </div>
-                    <div>
-                        <h1 className='font-semibold text-white text-sm'>Tajwid List</h1>
-                        <p className='font-normal text-xs text-white '>Go to {'>'}</p>
-                    </div>
+                    <Link to={'/doa'}>
+                        <div>
+                            <img className='w-[80px] h-[80px] mt-[-10px] mb-3' src={quran3} alt='icon quran 3' />
+                        </div>
+                        <div>
+                            <h1 className='font-semibold text-white text-sm'>Du'a List</h1>
+                            <p className='font-normal text-xs text-white '>Go to {'>'}</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
             <br /><br />
