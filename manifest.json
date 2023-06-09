@@ -3,8 +3,8 @@
     "background_color": "#50e3c2",
     "display": "standalone",
     "description": "Al-Kalam is app for reading quran",
-    "scope": "https://zayyid123.github.io/al-kalam/",
-    "start_url": "https://zayyid123.github.io/al-kalam/",
+    "scope": "./",
+    "start_url": "./",
     "name": "Al-Kalam",
     "short_name": "Al-Kalam",
     "icons": [
